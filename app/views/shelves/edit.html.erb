@@ -1,0 +1,11 @@
+<h2>Editing book</h2>
+
+<%= form_for :shelf, url: shelves_path, method: :patch do |f| %>
+  <p>Title</p>
+  <%= f.text_field :title %>
+  <p>Body</p>
+  <%= f.text_area :body %><br>
+  <%= f.submit 'Update Book' %><br>
+  <%= link_to 'show', shelf_path %>
+  <%= link_to 'back', shelves_path %>
+<% end %>

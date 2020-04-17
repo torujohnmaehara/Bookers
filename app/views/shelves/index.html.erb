@@ -1,0 +1,18 @@
+<h1>Books</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th><%= link_to 'edit', edit_shelf_path(shelf) %></th>
+    <th><%= link_to 'show', shelf_path(shelf) %></th>
+    <th><%= link_to 'destroy', shelf_path(shelf), method: :delete, data: {confirm: "Are you sure?"} %></th>
+  </tr>
+  <% @shelves.each do |shelf| %>
+  <tr>
+    <th> <%= shelf.title %></th>
+    <th><%= shelf.body %></th>
+  </tr>
+
+</table>
+<% end %>
