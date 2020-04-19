@@ -1,2 +1,0 @@
-class Shelf < ApplicationRecord
-end
